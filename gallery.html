@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexaPulse Gallery - Screenshots</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .nav a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 12px 24px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid #667eea;
+        }
+
+        .nav a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-item-info {
+            padding: 20px;
+        }
+
+        .gallery-item-info h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .gallery-item-info p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 40px;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 60px;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav a {
+                margin: 0;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>HexaPulse Gallery</h1>
+        <p>See HexaPulse in action</p>
+    </div>
+
+    <div class="nav">
+        <a href="/">← Back to Home</a>
+        <a href="support/">Support</a>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="Simulator Screenshot - Apple Watch Ultra 3 (49mm) - 2026-04-05 at 13.21.03.png" alt="HexaPulse Screenshot 1">
+                <div class="gallery-item-info">
+                    <h3>Main Interface</h3>
+                    <p>The primary HexaPulse visualization interface with real-time audio response.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Simulator Screenshot - Apple Watch Ultra 3 (49mm) - 2026-04-05 at 13.21.17.png" alt="HexaPulse Screenshot 2">
+                <div class="gallery-item-info">
+                    <h3>Visualization Style 1</h3>
+                    <p>Beautiful hexagonal patterns responding to audio input.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Simulator Screenshot - Apple Watch Ultra 3 (49mm) - 2026-04-05 at 13.21.24.png" alt="HexaPulse Screenshot 3">
+                <div class="gallery-item-info">
+                    <h3>Visualization Style 2</h3>
+                    <p>Dynamic color-changing visualization modes.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Simulator Screenshot - Apple Watch Ultra 3 (49mm) - 2026-04-05 at 13.21.31.png" alt="HexaPulse Screenshot 4">
+                <div class="gallery-item-info">
+                    <h3>Visualization Style 3</h3>
+                    <p>Geometric patterns that evolve with audio frequencies.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Simulator Screenshot - Apple Watch Ultra 3 (49mm) - 2026-04-05 at 13.21.43.png" alt="HexaPulse Screenshot 5">
+                <div class="gallery-item-info">
+                    <h3>Visualization Style 4</h3>
+                    <p>Smooth, flowing animations synced to sound.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Simulator Screenshot - Apple Watch Ultra 3 (49mm) - 2026-04-05 at 13.21.56.png" alt="HexaPulse Screenshot 6">
+                <div class="gallery-item-info">
+                    <h3>Visualization Style 5</h3>
+                    <p>Complex multi-layered audio visualization.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Simulator Screenshot - Apple Watch Ultra 3 (49mm) - 2026-04-05 at 13.22.04.png" alt="HexaPulse Screenshot 7">
+                <div class="gallery-item-info">
+                    <h3>Visualization Style 6</h3>
+                    <p>Enhanced contrast visualization mode.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Simulator Screenshot - Apple Watch Ultra 3 (49mm) - 2026-04-05 at 13.22.14.png" alt="HexaPulse Screenshot 8">
+                <div class="gallery-item-info">
+                    <h3>Visualization Style 7</h3>
+                    <p>Final visualization mode showcasing the app's capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>HexaPulse</strong> — Real-time Audio Visualization for Apple Watch</p>
+        <p style="margin-top: 15px;">Questions? <a href="support/">Visit our support page</a> or email <a href="mailto:noktirnal@drumnbus.com">noktirnal@drumnbus.com</a></p>
+        <p style="margin-top: 15px;">&copy; 2026 All rights reserved.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexaPulse - Audio Visualization for Apple Watch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #000;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 40px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .features {
+            background: white;
+            padding: 80px 40px;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .specs {
+            background: #f8f9fa;
+            padding: 80px 40px;
+        }
+
+        .specs h2 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        .specs-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .spec-item {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+
+        .spec-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .spec-item p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <img src="HexaPulse_AppIcon.png" alt="HexaPulse App Icon" class="hero-icon">
+        <h1>HexaPulse</h1>
+        <p>See your sound come alive with real-time audio visualization on your Apple Watch</p>
+        <div class="cta-buttons">
+            <a href="https://apps.apple.com/" class="btn btn-primary">Get on App Store</a>
+            <a href="gallery/" class="btn btn-secondary">See Screenshots</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎵</div>
+                <h3>Real-time Visualization</h3>
+                <p>Watch your audio transform into beautiful hexagonal patterns that react instantly to every sound.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⌚</div>
+                <h3>Native watchOS Design</h3>
+                <p>Optimized from the ground up for Apple Watch with intuitive controls and smooth performance.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎙️</div>
+                <h3>Built-in Microphone</h3>
+                <p>Capture audio directly from your Apple Watch's microphone for live, responsive visualizations.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💫</div>
+                <h3>Watch Face Complication</h3>
+                <p>Quick-launch access to HexaPulse from your favorite watch faces with a single tap.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>High Performance</h3>
+                <p>Smooth 60fps rendering ensures fluid animations even with complex audio patterns.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Privacy First</h3>
+                <p>All audio processing happens locally on your device. Nothing is recorded or transmitted.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="specs">
+        <h2>Requirements</h2>
+        <div class="specs-grid">
+            <div class="spec-item">
+                <h4>Device</h4>
+                <p>Apple Watch Series 4 or later</p>
+            </div>
+
+            <div class="spec-item">
+                <h4>OS Version</h4>
+                <p>watchOS 26.4 or later</p>
+            </div>
+
+            <div class="spec-item">
+                <h4>Permissions</h4>
+                <p>Microphone access (required)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Visualize Your World?</h2>
+        <p>Join thousands of users experiencing audio in a whole new way</p>
+        <a href="https://apps.apple.com/" class="btn btn-primary">Download HexaPulse Today</a>
+        <div class="divider"></div>
+        <p>Questions? Visit our <a href="support/">support page</a> or contact us at <a href="mailto:noktirnal@drumnbus.com">noktirnal@drumnbus.com</a></p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 HexaPulse. All rights reserved.</p>
+        <p>HexaPulse is an independent watchOS application for Apple Watch.</p>
+    </footer>
+</body>
+</html>
